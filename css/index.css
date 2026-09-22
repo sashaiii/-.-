@@ -1,0 +1,169 @@
+/* css/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700&display=swap');
+
+:root {
+    --primary-color: #0d6efd;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --text-color: #212529;
+    --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    --border-radius: 0.5rem;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Golos Text', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Шапка и подвал */
+header, footer {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+header .nav-link, footer .nav-link {
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+header .nav-link:hover, footer .nav-link:hover {
+    color: var(--primary-color);
+}
+
+/* Карточки номеров и заявок */
+.card {
+    background-color: var(--card-bg);
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    margin: 1rem 0;
+    padding: 1rem;
+    max-width: 30rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.card-img-top {
+    border-radius: var(--border-radius);
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body h3, .card-body h5 {
+    margin-bottom: 0.5rem;
+}
+
+/* Списки внутри карточек */
+.list-group-item {
+    border: none;
+    background-color: transparent;
+    padding: 0.5rem 0;
+    transition: background-color 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: #f1f1f1;
+}
+
+/* Кнопки */
+.btn {
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #157347;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #bb2d3b;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Формы */
+form {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+
+.form-control, .form-select {
+    border-radius: var(--border-radius);
+    border: 1px solid #ced4da;
+    padding: 0.5rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Уведомления */
+.alert {
+    border-radius: var(--border-radius);
+    border: none;
+    box-shadow: var(--shadow-sm);
+}
+
+.alert-success {
+    background-color: var(--success-color);
+    color: #fff;
+}
+
+.alert-danger {
+    background-color: var(--danger-color);
+    color: #fff;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .card {
+        max-width: 100%;
+    }
+    
+    header, footer {
+        padding: 0.5rem;
+    }
+    
+    h1 {
+        font-size: 1.75rem;
+    }
+}
